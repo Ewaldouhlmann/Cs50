@@ -59,6 +59,7 @@ int isalphastr(string str)
 
 char* get_cipher(string plaintext, string key)
 {
+    
     int strlength = strlen(plaintext);
     string alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     char* cipherstring = malloc((strlength + 1) * sizeof(char)); // Alocação dinâmica de memória
