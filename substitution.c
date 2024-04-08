@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stdlib.h> // Inclua a biblioteca stdlib.h para usar malloc e free
+#include <stdlib.h>
 #include <cs50.h>
 #include <string.h>
 #include <ctype.h>
@@ -19,8 +19,7 @@ int main(int argc, string argv[])
         if (strlen(argv[1]) == 26 && !is_validEntry)
         {
             string plaintext = get_string("Plaintext: ");
-            /*Getting the cippertext converted msg*/
-
+            /*Getting the cippertext converted msg and printing*/
             char* ciphertext = get_cipher(plaintext, upper);
             printf("ciphertext: %s\n", ciphertext);
             free(ciphertext);
@@ -68,9 +67,9 @@ char* get_cipher(string plaintext, string key)
 {
 
     //This function receives a plaintext and a key and returns a converted message with the key for each letter
+    //making a dynamic memory alloc to cipherstring
     int strlength = strlen(plaintext);
     string alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    //making a dynamic memory alloc
     char* cipherstring = malloc((strlength + 1) * sizeof(char));
     for (int i = 0; i < strlength; i++)
     {
@@ -100,6 +99,7 @@ char* get_cipher(string plaintext, string key)
 
 char* to_upperstr(char *str)
 {
+    //This function just upper bound an array
     int str_length = strlen(str);
     char *upper_string = malloc((str_length + 1) * sizeof(char));  // Allocate memory for uppercase string
     if (upper_string == NULL)
@@ -110,8 +110,10 @@ char* to_upperstr(char *str)
 
     for (int i = 0; i < str_length; i++)
     {
-        upper_string[i] = toupper(str[i]);  // Convert each character to uppercase
+        upper_string[i] = toupper(str[i]);
+        //converting each char to upper case
     }
-    upper_string[str_length] = '\0';  // Add null terminator to end the string
+    //adding a null char in final of string
+    upper_string[str_length] = '\0';
     return upper_string;
 }
