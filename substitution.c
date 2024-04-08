@@ -15,7 +15,8 @@ int main(int argc, string argv[])
         if (strlen(argv[1]) == 26 && !is_validEntry)
         {
             string plaintext = get_string("Plaintext: ");
-            char* ciphertext = get_cipher(plaintext, argv[1]);
+            string upper_cipher = toupper(argv[1])
+            char* ciphertext = get_cipher(plaintext, upper_cipher);
             printf("ciphertext: %s\n", ciphertext);
             free(ciphertext);
         }
