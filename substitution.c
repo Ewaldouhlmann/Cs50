@@ -6,16 +6,22 @@
 
 int isalphastr(string str);
 char* get_cipher(string plaintext, string key);
+string to_upperstr(string str);
 
 int main(int argc, string argv[])
 {
     if (argc == 2)
     {
         int is_validEntry = isalphastr(argv[1]);
+        //If the entry string cipher alphabet has 26 letters non reppetible
+        //continue asking for a input, else it will return a error msg
+        char *upper = to_upperstr(argv[1]);
         if (strlen(argv[1]) == 26 && !is_validEntry)
         {
             string plaintext = get_string("Plaintext: ");
-            char* ciphertext = get_cipher(plaintext, argv[1]);
+            /*Getting the cippertext converted msg*/
+
+            char* ciphertext = get_cipher(plaintext, upper);
             printf("ciphertext: %s\n", ciphertext);
             free(ciphertext);
         }
@@ -36,6 +42,7 @@ int main(int argc, string argv[])
 
 int isalphastr(string str)
 {
+    /*This function verify if the cipher alfabet is valid(has only letters and 1 equivalent letter per alfabet)*/
     int length = strlen(str);
     for (int i = 0; i < length; i++)
     {
@@ -60,9 +67,11 @@ int isalphastr(string str)
 char* get_cipher(string plaintext, string key)
 {
 
+    //This function receives a plaintext and a key and returns a converted message with the key for each letter
     int strlength = strlen(plaintext);
     string alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    char* cipherstring = malloc((strlength + 1) * sizeof(char)); // Alocação dinâmica de memória
+    //making a dynamic memory alloc
+    char* cipherstring = malloc((strlength + 1) * sizeof(char));
     for (int i = 0; i < strlength; i++)
     {
         if (isalpha(plaintext[i]))
@@ -84,6 +93,25 @@ char* get_cipher(string plaintext, string key)
             cipherstring[i] = plaintext[i];
         }
     }
-    cipherstring[strlength] = '\0'; // Null terminate the string
+    cipherstring[strlength] = '\0';
     return cipherstring;
+}
+
+
+char* to_upperstr(char *str)
+{
+    int str_length = strlen(str);
+    char *upper_string = malloc((str_length + 1) * sizeof(char));  // Allocate memory for uppercase string
+    if (upper_string == NULL)
+    {
+        printf("Memory allocation failed\n");
+        exit(1);  // Exit program if memory allocation fails
+    }
+
+    for (int i = 0; i < str_length; i++)
+    {
+        upper_string[i] = toupper(str[i]);  // Convert each character to uppercase
+    }
+    upper_string[str_length] = '\0';  // Add null terminator to end the string
+    return upper_string;
 }
