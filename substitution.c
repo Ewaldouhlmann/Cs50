@@ -16,7 +16,7 @@ int main(int argc, string argv[])
         {
             string plaintext = get_string("Plaintext: ");
             char* ciphertext = get_cipher(plaintext, argv[1]);
-            printf("ciphertext: %s\n", ciphertext);
+            printf("ciphertext %s\n", ciphertext);
             free(ciphertext);
         }
         else
