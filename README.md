@@ -21,7 +21,7 @@
     </li>
     <li>
     <ul>
-    Week 2
+    Week 2 (Array)
     <li>Scrabble - In Scrabble game, it's ask two inputs(Player 1 and Player 2 word) and check by the sum of the point values for each letter in the current player word. And return the winner if it has a winner, if isn't has a winner return Tie</li>
     <li>Readability - In Readability, is used the Coleman-Liau index in a user entry text to verify the (U.S.) grade level that is needed to understand some text.
     </li>
