@@ -16,8 +16,8 @@ int main(int argc, string argv[])
         {
             string plaintext = get_string("Plaintext: ");
             char* ciphertext = get_cipher(plaintext, argv[1]);
-            printf("%s\n", ciphertext);
-            free(ciphertext); // Liberar a memória alocada para ciphertext
+            printf("ciphertext %s\n", ciphertext);
+            free(ciphertext);
         }
         else
         {
@@ -59,7 +59,7 @@ int isalphastr(string str)
 
 char* get_cipher(string plaintext, string key)
 {
-    
+
     int strlength = strlen(plaintext);
     string alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     char* cipherstring = malloc((strlength + 1) * sizeof(char)); // Alocação dinâmica de memória
