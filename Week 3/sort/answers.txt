@@ -1,0 +1,15 @@
+sort1 uses: Bubble sort
+
+How do you know?: Because in large sorted number is so much better than sort3,
+and because sort2 is much faster than the other in large random numbers, we premuse that
+sort 2 is merge sort
+
+sort2 uses: Merge sort
+
+How do you know?: Because in most part of tests, it's so much
+efficient than the other(especially in random numbers).
+
+sort3 uses: Selection sort
+
+How do you know?: Because is less efficient that sort 2 in random tests and also
+less efficient that sort 1 in sorted tests.
