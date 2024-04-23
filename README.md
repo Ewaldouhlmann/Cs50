@@ -30,12 +30,12 @@
     </ul>
     </li>
     <li>
-    <ul>Week 3 (Doing)
+    <ul>Week 3 (Done)
     <li>Sort - In Sort, three sort models are given (sort1, sort2 and sort3)  and we must find out which sort model each files is from (Bubble, selection, merge) using "time" command in different data types (sorted, random, descendind)</li>
     <li>Plurality - In Plurality, are given the candidates from a election and the quantity of votes, each voter need to select one candidate. The program should return the winner of the election.</li>
     <li>Tideman - In Tideman, are given the candidates from a election and the quantity of votes, each voter need to rank the candidates in order of preference. The progam should return the winner of the election.</li>
     </ul></li>
-    <li>Week 4 (To do)</li>
+    <li>Week 4 (Doing)</li>
     <li>Week 5 (To do)</li>
     <li>Week 6 (To do)</li>
     <li>Week 7 (To do)</li>
