@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+    <div class="container mt-4">
+        <!-- User Greeting and Wallet Info -->
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <p class="mb-0">Hello, {{ user['username'] }}!</p>
+            <p class="mb-0">Wallet: {{ user['cash'] | usd }}</p>
+        </div>
+
+        {% if portfolio %}
+        <form method="post" action="/sell">
+            <div class="d-flex flex-column justify-content-end align-items-start" style="width: 50vw;">
+                <div class="d-flex gap-4 mb-3">
+                    <div class="d-flex flex-column align-items-start" style="width: 40vw;">
+                        <label for="categorySelect">Select a symbol to sell:</label>
+
+                        <!-- Select symbol -->
+                        <select id="categorySelect" name="symbol" class="form-control">
+                            {% for p in portfolio %}
+                                <option value="{{ p['symbol'] }}">{{ p['symbol'] }}</option>
+                            {% endfor %}
+                        </select>
+                        
+                    </div>
+                    <div class="d-flex flex-column align-items-start" style="width: 15vw;">
+                        <label for="quantityInput">Number of shares:</label>
+                        <input type="number" id="quantityInput" name="shares" class="form-control" style="width: 100%;" min="1" placeholder="Quantity">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </form>
+        {% else %}
+            <div class="alert alert-info" role="alert">
+                No symbols available for sale.
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}

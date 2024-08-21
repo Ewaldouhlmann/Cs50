@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+    <div class="container mt-4">
+        <div class="d-flex justify-content-between align-items-center">
+            <p>Hello, {{ user['username'] }}!</p>
+            <p>Wallet: {{ user['cash'] | usd }}</p>
+        </div>
+    </div>
+
+    {% if portfolio %}
+    <div class="container mt-4">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Symbol</th>
+                    <th>Total Shares</th>
+                    <th>Total Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for symbol, data in portfolio.items() %}
+                <tr>
+                    <td>{{ symbol }}</td>
+                    <td>{{ data['total_shares'] }}</td>
+                    <td>{{ data['total_value'] | usd }}</td>
+                </tr>
+                {% endfor %}
+
+                <tr>
+                    <td><strong>Total</strong></td>
+                    <td><strong>{{ total_shares }}</strong></td>
+                    <td><strong>{{ total_price | usd }}</strong></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    {% endif %}
+{% endblock %}

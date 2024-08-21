@@ -1,0 +1,9 @@
+If songs.db contains the top 100 songs of one listener from 2018, how would you characterize their audio aura?
+Probably an Orange Aura, because the biggest part of hit songs are short and
+happiness, with a high energy and a high danceability.
+
+Hypothesize about why the way you’ve calculated this aura might not be very representative of the listener. What better ways of calculating this aura would you propose?
+I believe that it would be an assessment of three diferent auras that the listens listens to most. The similar songs (in the same range of energy, danceability...) they should join togheter a list.
+Then, takes the top 3 lists with more songs equivalents and get the similar aura for each song list in top 3.
+
+

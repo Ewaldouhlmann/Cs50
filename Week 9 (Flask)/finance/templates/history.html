@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    <div style="text-align: center;">
+        <h3>Transactions</h3>
+        <table style="margin: 0 auto; border-collapse: collapse;">
+            {% if transactions %}
+            <thead>
+                <tr>
+                    <th style="padding: 8px; border: 1px solid #ddd;">Symbol</th>
+                    <th style="padding: 8px; border: 1px solid #ddd;">Type</th>
+                    <th style="padding: 8px; border: 1px solid #ddd;">Shares</th>
+                    <th style="padding: 8px; border: 1px solid #ddd;">Price</th>
+                    <th style="padding: 8px; border: 1px solid #ddd;">Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for value in transactions %}
+                <tr style="background-color: {{ '#F08080' if value['type'] == 'sell' else '#98FB98'}};">
+                    <td style="padding: 8px; border: 1px solid #ddd;">{{ value['symbol'] }}</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">{{ value['type'] | capitalize }}</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">{{ value['shares'] }}</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">{{ value['price'] | usd }}</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">
+                        {{ value['timestamp'].strftime('%m/%d/%Y %I:%M %p') }}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+            {% else %}
+            <tbody>
+                <tr>
+                    <td colspan="5" style="padding: 8px; border: 1px solid #ddd; text-align: center;">No transactions available</td>
+                </tr>
+            </tbody>
+            {% endif %}
+        </table>
+    </div>
+{% endblock %}

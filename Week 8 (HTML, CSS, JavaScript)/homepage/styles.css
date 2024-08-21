@@ -1,0 +1,161 @@
+/*Theme colors and defaults*/
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+:root {
+    --dark-blue: #2c3e50;
+    --light-blue: #2980b9;
+    --light-gray: #ecf0f1;
+}
+.navbar .nav-link, .navbar .navbar-brand, .navbar .navbar-toggler {
+    color: #FFFFFF;
+}
+
+.nav-link:hover {
+    color: #000000;
+}
+.nav-link.active {
+    color: #FFFFFF;
+}
+
+.nav-link.active, .nav-link.active.hovering {
+    color: #FFFFFF;
+}
+
+.technologies ul, .courses ul {
+    list-style-type: none;
+    padding: 0;
+}
+.technologies li, .courses li {
+    background-color: var(--light-gray);
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+/*Texts*/
+h1 {
+    color: var(--dark-blue);;
+}
+
+/*Navbar*/
+.navbar {
+    width: auto;
+    height: 10vh;
+}
+
+.container-fluid, .navbar{
+    background-color: var(--dark-blue);
+}
+
+h1 {
+    background: linear-gradient(to right, var(--light-blue), var(--dark-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/*About*/
+.about_box{
+    width: auto;
+    height: 85vh;
+}
+.about-content, .about-info {
+    width: 47.5vw;
+    height: 50vh;
+}
+/*Portfólio*/
+.portfolio-box {
+    text-align: center;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.carousel-item img {
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.carousel-caption h5, .carousel-caption p {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    top: 50%; /* Posiciona o botão no meio verticalmente */
+    transform: translateY(-50%); /* Ajusta para que o botão fique exatamente no meio */
+}
+
+
+/*Contact*/
+.contact_box
+{
+    width: auto;
+    height: 85vh;
+}
+
+.contact-img{
+    border-radius: 50%;
+}
+
+.contact-icon {
+    margin-right: 8px;
+    width:20px;
+    height: 20px;
+}
+
+.vertical-line{
+    border-left: 2px solid var(--dark-blue);
+    height: 50vh;
+    margin: 0 20px;
+    width: 5vw;
+}
+
+
+/*Footer*/
+.footer {
+    width: 100vw;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--dark-blue);
+    color: var(--light-gray);
+    padding: 10px;
+    border-top: 1px solid var(--dark-blue);
+}
+
+
+
+
+/*Home Page*/
+.about-info, .about-content {
+    text-align: center;
+}
+.about-box {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+}

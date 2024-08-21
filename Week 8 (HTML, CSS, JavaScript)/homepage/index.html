@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <title>My Webpage</title>
+        <style>
+            .container {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              min-height: 80vh;
+          }
+          </style>
+    </head>
+    <body>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">My Web Page</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item active">
+                <a class="nav-link" aria-current="index.html" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="portfolio.html">Portfólio</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+
+    <!-- Home Content -->
+    <div class="container mt-5 d-flex justify-content-center min-heigh: 80vh align-items-center">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="d-flex justify-content-center align-items-center gap-5 contact_box">
+                    <div class="d-flex flex-column justify-content-start align-items-center gap-2">
+                        <img src="/images/me.png" class="img-fluid contact-img" alt="Profile Picture"/>
+                        <h1>Hello, thats my Page!</h1>
+                        <div class="d-flex flex-column align-items-center gap-2 about-info">
+                          <h1>About me</h1>
+                          <h4>I'm Ewaldo and I'm a computer science student at UFSC (Universidade Federal de Santa Catarina) in campus Florianópolis - Brasil</h4>
+                          <button type="button" class="btn btn-primary"><a href="about.html" class="text-white text-decoration-none">About</a></button>
+                          <button type="button" class="btn btn-secondary"><a href="contact.html" class="text-white text-decoration-none">Contact</a></button>
+                          <button type="button" class="btn btn-info"><a href="portfolio.html" class="text-white text-decoration-none">Portfolio</a></button>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer mt-5 py-3 bg-dark text-white text-center">This is Ewaldo's page</footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    </body>
+</html>
