@@ -30,6 +30,8 @@
     <h3>Week 4 (Memory)</h3>
     <li><strong>Volume:</strong> A program that takes a WAV file and a scaling factor to adjust the audio’s volume. It reads the file, processes each sample by multiplying it by the factor, and writes the result to a new WAV file.</li>
     </ul></li>
+    <li><strong>Filter:</strong> A program that applies image filters to BMP files by manipulating the pixel values in a bitmap. The goal is to implement edge detection to highlight boundaries in images. This involves processing 24-bit BMP files where each pixel is represented by three color components (blue, green, red). The program reads the image data, applies the filter, and writes the modified image back to a new BMP file.</li>
+    </ul></li>
     <li><ul>
     <h3>Week 5 (Data Structures - C)</h3>
     <li><strong>Inheritance:</strong> A program that simulates the inheritance of blood types in a family. It determines a child’s possible blood types based on the blood types of the parents. Each parent contributes one allele to their child, and the program calculates all possible combinations of blood types for the child based on the parents' alleles.</li>
